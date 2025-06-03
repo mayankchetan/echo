@@ -1,0 +1,183 @@
+name: simpleTurbine
+description: simple turbine definition for modal benchmarking - last updated on 08MAY25 by Mayank Chetan
+assembly: {turbine_class: III, turbulence_class: C, drivetrain: Constant_eff, rotor_orientation: Upwind, number_of_blades: 3, rotor_diameter: 127.184, hub_height: 120.0, rated_power: 2300000.0, lifetime: 25.0}
+components:
+    blade:
+        outer_shape_bem:
+            airfoil_position:
+                grid: [0.0, 1.0]
+                labels: [circular, circular]
+            chord:
+                grid: [0.0, 1.0]
+                values: [2, 2]
+            twist: &id002
+                grid: [0.0, 1.0]
+                values: [0, 0]
+            pitch_axis:
+                grid: [0.0, 1.0]
+                values: [0.5, 0.5]
+            reference_axis: &id001
+                x:
+                  grid: [0.0, 1.0]
+                  values: [0, 0]
+                y:
+                  grid: [0.0, 1.0]
+                  values: [0, 0]
+                z:
+                    grid: [0.0, 1.0]
+                    values: [0.0, 63.0]
+        internal_structure_2d_fem:
+            reference_axis: *id001
+            webs:
+               -  name: ghost_web
+                  rotation: {fixed: twist}
+                  offset_y_pa:
+                      grid: [0.0, 1.0]
+                      values: [0.0, 0.0]
+                  start_nd_arc:
+                      grid: [0.0, 1.0]
+                      values: [0.0, 0.0]
+                  end_nd_arc:
+                      grid: [0.0, 1.0]
+                      values: [0.0, 0.0]
+            layers:
+               -  name: GFRP
+                  material: glass_uni
+                  thickness:
+                      grid: [0.0, 1.0]
+                      values: [0.01, 0.01]
+                  start_nd_arc:
+                      grid: [0.0, 1.0]
+                      values: [0.0, 0.0]
+                  end_nd_arc:
+                      grid: [0.0, 1.0]
+                      values: [1.0, 1.0]
+                  fiber_orientation:
+                      grid: [0.0, 1.0]
+                      values: [0.0, 0.0]
+    hub: {cone_angle: 0.0, diameter: 2.0, drag_coefficient: 0.5, hub_material: steel, spinner_material: glass_biax, flange_t2shell_t: 4.0, flange_OD2hub_D: 0.5, flange_ID2OD: 0.8, hub_blade_spacing_margin: 1.2, hub_stress_concentration: 2.5, n_front_brackets: 3, n_rear_brackets: 3, clearance_hub_spinner: 0.75, spin_hole_incr: 1.2, pitch_system_scaling_factor: 0.54, spinner_gust_ws: 70.0}
+    nacelle:
+        generator:
+            generator_length: 2.0
+            generator_rpm_efficiency_user:
+                grid: [0.0, 1.0]
+                values: [0.95, 0.95]
+        drivetrain:
+            diameter: 3.0
+            uptilt: 0.0
+            distance_tt_hub: 2.0
+            distance_hub_mb: 1.912
+            distance_mb_mb: 0.368
+            overhang: 4.0
+            lss_diameter: [0.577, 0.577]
+            lss_wall_thickness: [0.288, 0.288]
+            hss_length: 1.5
+            hss_diameter: [0.288, 0.288]
+            hss_wall_thickness: [0.144, 0.144]
+            bedplate_flange_width: 1.0
+            bedplate_flange_thickness: 0.05
+            bedplate_web_thickness: 0.05
+            gear_ratio: 96.76
+            planet_numbers: [3, 3, 1]
+            gear_configuration: eep
+            gearbox_efficiency: 0.95
+            gearbox_torque_density: 200.
+            mb1Type: CARB
+            mb2Type: SRB
+            uptower: true
+            lss_material: steel
+            hss_material: steel
+            bedplate_material: steel
+            nose_diameter: [0.3, 0.3]
+            nose_wall_thickness: [0.1, 0.1]
+            bedplate_wall_thickness:
+                grid: [0.0, 1.0]
+                values: [0.05, 0.05]
+            hvac_mass_coefficient: 0.08
+            damping_ratio: 0.005
+    tower:
+        outer_shape_bem:
+            reference_axis:
+                x:
+                  grid: [0.0, 1.0]
+                  values: [0, 0]
+                y:
+                  grid: [0.0, 1.0]
+                  values: [0, 0]
+                z:
+                    grid: [0.0, 1.0]
+                    values: [0.0, 117.0]
+            outer_diameter:
+                grid: [0.0, 1.0]
+                values: [4.0, 4.0]
+            drag_coefficient:
+                grid: [0.0, 1.0]
+                values: [1.0, 1.0]
+        internal_structure_2d_fem:
+            outfitting_factor: 1.07
+            reference_axis:
+                x:
+                  grid: [0.0, 1.0]
+                  values: [0, 0]
+                y:
+                  grid: [0.0, 1.0]
+                  values: [0, 0]
+                z:
+                    grid: [0.0, 1.0]
+                    values: [0.0, 117.0]
+            layers:
+               -  name: tower_wall
+                  material: steel
+                  thickness:
+                      grid: [0.0, 1.0]
+                      values: [0.01089, 0.01089]
+    # RNA:
+    #     elastic_properties_mb:
+    #         mass: 423388.78944786976
+    #         inertia: [216096950.67833546, 136888607.7236734, 135847036.4055429, -16.66395864047763, -837536.8079931606, 48222.277901162495]
+    #         center_mass: [-5.243616553567704, -0.07419957741293014, 2.0970371288617162]
+airfoils:
+   -  name: circular
+      coordinates:
+          x: [1.0, 0.99901, 0.99606, 0.99114, 0.98429, 0.97553, 0.96489, 0.95241, 0.93815, 0.92216, 0.90451, 0.88526, 0.86448, 0.84227, 0.81871, 0.79389, 0.76791, 0.74088, 0.71289, 0.68406, 0.65451, 0.62434, 0.59369, 0.56267, 0.5314, 0.5, 0.4686, 0.43733, 0.40631, 0.37566, 0.34549, 0.31594, 0.28711, 0.25912, 0.23209, 0.20611, 0.18129, 0.15773, 0.13552, 0.11474, 0.09549, 0.07784, 0.06185, 0.04759, 0.03511, 0.02447, 0.01571, 0.00886, 0.00394, 0.00099, 0.0, 0.00099, 0.00394, 0.00886, 0.01571, 0.02447, 0.03511, 0.04759, 0.06185, 0.07784, 0.09549, 0.11474, 0.13552, 0.15773, 0.18129, 0.20611, 0.23209, 0.25912, 0.28711, 0.31594, 0.34549, 0.37566, 0.40631, 0.43733, 0.4686, 0.5, 0.5314, 0.56267, 0.59369, 0.62434, 0.65451, 0.68406, 0.71289, 0.74088, 0.76791, 0.79389, 0.81871, 0.84227, 0.86448, 0.88526, 0.90451, 0.92216, 0.93815, 0.95241, 0.96489, 0.97553, 0.98429, 0.99114, 0.99606, 0.99901, 1.0]
+          y: [0.0, 0.0314, 0.06267, 0.09369, 0.12434, 0.15451, 0.18406, 0.21289, 0.24088, 0.26791, 0.29389, 0.31871, 0.34227, 0.36448, 0.38526, 0.40451, 0.42216, 0.43815, 0.45241, 0.46489, 0.47553, 0.48429, 0.49114, 0.49606, 0.49901, 0.5, 0.49901, 0.49606, 0.49114, 0.48429, 0.47553, 0.46489, 0.45241, 0.43815, 0.42216, 0.40451, 0.38526, 0.36448, 0.34227, 0.31871, 0.29389, 0.26791, 0.24088, 0.21289, 0.18406, 0.15451, 0.12434, 0.09369, 0.06267, 0.0314, 0.0, -0.0314, -0.06267, -0.09369, -0.12434, -0.15451, -0.18406, -0.21289, -0.24088, -0.26791, -0.29389, -0.31871, -0.34227, -0.36448, -0.38526, -0.40451, -0.42216, -0.43815, -0.45241, -0.46489, -0.47553, -0.48429, -0.49114, -0.49606, -0.49901, -0.5, -0.49901, -0.49606, -0.49114, -0.48429, -0.47553, -0.46489, -0.45241, -0.43815, -0.42216, -0.40451, -0.38526, -0.36448, -0.34227, -0.31871, -0.29389, -0.26791, -0.24088, -0.21289, -0.18406, -0.15451, -0.12434, -0.09369, -0.06267, -0.0314, 0.0]
+      relative_thickness: 1.0
+      aerodynamic_center: 0.5
+      polars:
+         -  configuration: Default
+            re: 3000000.0
+            c_m:
+                grid: [-3.141592653589793, 3.141592653589793]
+                values: [0.0, 0.0]
+            c_l:
+                grid: [-3.141592653589793, 3.141592653589793]
+                values: [0.0, 0.0]
+            c_d:
+                grid: [-3.141592653589793, 3.141592653589793]
+                values: [0.5, 0.5]
+materials:
+   -  name: glass_uni
+      description: Vectorply E-LT-5500, Epikote MGS RIMR 135/Epicure MGS RIMH 1366 epoxy
+      source: MSU composites database 3D property tests
+      orth: 1.0
+      rho: 1940.0
+      E: [43700000000.0, 16500000000.0, 15450000000.0]
+      G: [3265000000.0, 3495000000.0, 3480000000.0]
+      nu: [0.262, 0.264, 0.35]
+      Xt: [640230000.0, 38100000.0, 0.0]
+      Xc: [370690000.0, 82180000.0, 0]
+      S: [30170000.0, 18970000.0, 6210000.0]
+      m: 10
+      GIc: 61.0
+      GIIc: 101.0
+      alp0: 50.0
+      fvf: 0.57
+      fwf: 0.7450682696347697
+      ply_t: 0.005
+      unit_cost: 1.87
+      waste: 0.05
+      fiber_density: 2535.5
+      area_density_dry: 7.227162215457267
+      component_id: 5
+   -  {name: steel, description: Steel of the tower and monopile ASTM A572 Grade 50, source: "'http://www.matweb.com/search/DataSheet.aspx?MatGUID=9ced5dc901c54bd1aef19403d0385d7f'", orth: 0, rho: 7800, alpha: 0.0, E: 200000000000.0, nu: 0.3, G: 79300000000.0, GIc: 0, GIIc: 0, alp0: 0, Xt: 450000000.0, Xc: 450000000.0, S: 0, Xy: 345000000.0, m: 3, A: 3.5534648443719767e10, unit_cost: 0.7}
+environment: {air_density: 1.225, air_dyn_viscosity: 1.81e-05, weib_shape_parameter: 2.0, air_speed_sound: 340.0, shear_exp: 0.2, water_density: 1025.0, water_dyn_viscosity: 0.0013351, soil_shear_modulus: 140000000.0, soil_poisson: 0.4, gravity: 9.80665, air_pressure: 103500.0, air_vapor_pressure: 1700.0, water_depth: 0.0, V_mean: 0.0}

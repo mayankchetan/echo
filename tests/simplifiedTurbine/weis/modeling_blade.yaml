@@ -1,0 +1,26 @@
+# Generic modeling options file to run standard WISDEM case
+General:
+    verbosity: True  # When set to True, the code prints to screen many infos
+WISDEM:
+    RotorSE:
+        flag: False
+        spar_cap_ss: Spar_cap_ss
+        spar_cap_ps: Spar_cap_ps
+        te_ss: TE_reinf_ss
+        te_ps: TE_reinf_ps
+    DriveSE:
+        flag: False
+    TowerSE:             # Options of TowerSE module
+        flag: True
+        n_refine: 20
+    BOS:
+        flag: False
+
+    Loading:
+        mass: 0.0
+        center_of_mass: [0.0, 0.0, 0.0]
+        moment_of_inertia: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        loads:
+            - force: [0.0, 0.0, 0.0]
+              moment: [0.0, 0.0, 0.0]
+              velocity: 0.0

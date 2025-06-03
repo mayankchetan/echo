@@ -1,0 +1,397 @@
+variables,type,units,values,description
+tcc.main_bearing_mass,input,kg,0.0,
+tcc.bearing_mass_cost_coeff,input,USD/kg,4.5,
+tcc.bedplate_mass,input,kg,0.0,
+tcc.bedplate_mass_cost_coeff,input,USD/kg,2.9,
+tcc.blade_mass,input,kg,0.0,
+tcc.blade_mass_cost_coeff,input,USD/kg,14.6,
+tcc.blade_cost_external,input,USD,0.0,
+tcc.brake_mass,input,kg,0.0,
+tcc.brake_mass_cost_coeff,input,USD/kg,3.6254,
+tcc.machine_rating,input,kW,5000.0,
+tcc.controls_machine_rating_cost_coeff,input,USD/kW,21.15,
+tcc.converter_mass,input,kg,0.0,
+tcc.converter_mass_cost_coeff,input,USD/kg,18.8,
+tcc.cover_mass,input,kg,0.0,
+tcc.cover_mass_cost_coeff,input,USD/kg,5.7,
+tcc.elec_connec_machine_rating_cost_coeff,input,USD/kW,41.85,
+tcc.gearbox_mass,input,kg,0.0,
+tcc.gearbox_torque_density,input,N*m/kg,200.0,"In 2024, modern 5-7MW gearboxes are able to reach 200 Nm/kg"
+tcc.gearbox_torque_cost,input,USD/kN/m,50.0,"In 2024, modern 5-7MW gearboxes cost approx $50/kNm"
+tcc.generator_mass,input,kg,0.0,
+tcc.generator_mass_cost_coeff,input,USD/kg,12.4,
+tcc.generator_cost_external,input,USD,0.0,
+tcc.hss_mass,input,kg,0.0,
+tcc.hss_mass_cost_coeff,input,USD/kg,6.8,
+tcc.hub_cost,output,USD,0.0,
+tcc.hub_mass,input,kg,0.0,
+tcc.pitch_system_cost,output,USD,0.0,
+tcc.pitch_system_mass,input,kg,0.0,
+tcc.spinner_cost,output,USD,0.0,
+tcc.spinner_mass,input,kg,0.0,
+tcc.hub_assemblyCostMultiplier,input,,0.0,
+tcc.hub_overheadCostMultiplier,input,,0.0,
+tcc.hub_profitMultiplier,input,,0.0,
+tcc.hub_transportMultiplier,input,,0.0,
+tcc.hub_mass_cost_coeff,input,USD/kg,3.9,
+tcc.hvac_mass,input,kg,0.0,
+tcc.hvac_mass_cost_coeff,input,USD/kg,124.0,
+tcc.lss_mass,input,kg,0.0,
+tcc.lss_mass_cost_coeff,input,USD/kg,11.9,
+tcc.lss_cost,output,USD,0.0,
+tcc.main_bearing_cost,output,USD,0.0,
+tcc.gearbox_cost,output,USD,0.0,
+tcc.hss_cost,output,USD,0.0,
+tcc.brake_cost,output,USD,0.0,
+tcc.generator_cost,output,USD,0.0,
+tcc.bedplate_cost,output,USD,0.0,
+tcc.yaw_system_cost,output,USD,0.0,
+tcc.yaw_mass,input,kg,0.0,
+tcc.converter_cost,output,USD,0.0,
+tcc.hvac_cost,output,USD,0.0,
+tcc.cover_cost,output,USD,0.0,
+tcc.elec_cost,output,USD,209250.0,
+tcc.controls_cost,output,USD,105750.0,
+tcc.platforms_mass,input,kg,0.0,
+tcc.platforms_cost,output,USD,0.0,
+tcc.transformer_cost,output,USD,0.0,
+tcc.transformer_mass,input,kg,0.0,
+tcc.nacelle_assemblyCostMultiplier,input,,0.0,
+tcc.nacelle_overheadCostMultiplier,input,,0.0,
+tcc.nacelle_profitMultiplier,input,,0.0,
+tcc.nacelle_transportMultiplier,input,,0.0,
+tcc.main_bearing_number,input,n/a,2,
+tcc.blade_cost,output,USD,0.0,
+tcc.rotor_cost,output,USD,0.0,
+tcc.rotor_mass_tcc,output,kg,0.0,
+tcc.nacelle_cost,output,USD,315000.0,
+tcc.nacelle_mass_tcc,output,kg,0.0,
+tcc.tower_cost,output,USD,775988.9940760562,
+tcc.tower_mass,input,kg,255999.9732346391,
+tcc.turbine_cost,output,USD,1090988.9940760562,
+tcc.turbine_cost_kW,output,USD/kW,218.19779881521123,
+tcc.turbine_mass_tcc,output,kg,255999.9732346391,
+tcc.pitch_system_mass_cost_coeff,input,USD/kg,22.1,
+tcc.platforms_mass_cost_coeff,input,USD/kg,17.1,
+tcc.crane_cost,input,USD,12000.0,
+tcc.crane,input,n/a,False,
+tcc.hub_system_cost,output,USD,0.0,
+tcc.hub_system_mass_tcc,output,kg,0.0,
+tcc.blade_number,input,n/a,3,
+tcc.spinner_mass_cost_coeff,input,USD/kg,11.1,
+tcc.tower_parts_cost,output,USD,775988.9940760562,
+tcc.tower_assemblyCostMultiplier,input,,0.0,
+tcc.tower_overheadCostMultiplier,input,,0.0,
+tcc.tower_profitMultiplier,input,,0.0,
+tcc.tower_transportMultiplier,input,,0.0,
+tcc.tower_mass_cost_coeff,input,USD/kg,2.9,
+tcc.tower_cost_external,input,USD,775988.9940760562,
+tcc.transformer_mass_cost_coeff,input,USD/kg,18.8,
+tcc.turbine_assemblyCostMultiplier,input,,0.0,
+tcc.turbine_overheadCostMultiplier,input,,0.0,
+tcc.turbine_profitMultiplier,input,,0.0,
+tcc.turbine_transportMultiplier,input,,0.0,
+tcc.yaw_mass_cost_coeff,input,USD/kg,8.3,
+towerse.env.distLoads.windLoads_Px,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.windLoads_Py,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.windLoads_Pz,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.windLoads_qdyn,input,N/m**2,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.windLoads_z,input,m,"[0.0, 5.8500000000000005, 11.700000000000001, 17.550000000000004, 23.400000000000002, 29.25, 35.10000000000001, 40.95, 46.800000000000004, 52.65, 58.5, 64.35000000000001, 70.20000000000002, 76.05, 81.9, 87.75, 93.60000000000001, 99.45000000000002, 105.3, 111.15, 117.0]",
+towerse.env.distLoads.windLoads_beta,input,deg,0.0,
+towerse.env.distLoads.waveLoads_Px,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.waveLoads_Py,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.waveLoads_Pz,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.waveLoads_qdyn,input,N/m**2,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.waveLoads_z,input,m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.distLoads.waveLoads_beta,input,deg,0.0,
+towerse.z_global,output,m,"[0.0, 5.8500000000000005, 11.700000000000001, 17.550000000000004, 23.400000000000002, 29.25, 35.10000000000001, 40.95, 46.800000000000004, 52.65, 58.5, 64.35000000000001, 70.20000000000002, 76.05, 81.9, 87.75, 93.60000000000001, 99.45000000000002, 105.3, 111.15, 117.0]",
+towerse.yaw,input,deg,0.0,
+towerse.env.Uref,input,m/s,0.0,
+towerse.wind_reference_height,input,m,117.0,
+towerse.z0,input,m,0.0,
+towerse.shearExp,input,,0.2,
+towerse.env.windLoads.U,input,m/s,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.outer_diameter_full,output,m,"[4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]",
+towerse.beta_wind,input,deg,0.0,
+towerse.rho_air,input,kg/m**3,1.225,
+towerse.mu_air,input,kg/m/s,1.81e-05,
+towerse.cd_usr,input,,"[-1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]",
+towerse.joint1,output,m,"[0.0, 0.0, 0.0]",
+towerse.joint2,output,m,"[0.0, 0.0, 117.0]",
+towerse.s_full,output,m,"[0.0, 0.05, 0.1, 0.15000000000000002, 0.2, 0.25, 0.30000000000000004, 0.35000000000000003, 0.4, 0.45, 0.5, 0.55, 0.6000000000000001, 0.65, 0.7000000000000001, 0.75, 0.8, 0.8500000000000001, 0.9, 0.9500000000000001, 1.0]",
+towerse.s_all,input,,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.g2e.Px_global,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.g2e.Py_global,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.g2e.Pz_global,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.g2e.qdyn_global,input,Pa,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.lc:Px,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.lc:Py,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.lc:Pz,input,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.lc:qdyn,input,Pa,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.z_full,output,m,"[0.0, 5.8500000000000005, 11.700000000000001, 17.550000000000004, 23.400000000000002, 29.25, 35.10000000000001, 40.95, 46.800000000000004, 52.65, 58.5, 64.35000000000001, 70.20000000000002, 76.05, 81.9, 87.75, 93.60000000000001, 99.45000000000002, 105.3, 111.15, 117.0]",
+towerse.t_full,output,m,"[0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868]",
+towerse.tower_height,input,m,117.0,
+towerse.E_full,output,Pa,"[200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0]",
+towerse.G_full,output,Pa,"[79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0]",
+towerse.rho_full,output,kg/m**3,"[8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0]",
+towerse.sigma_y_full,output,Pa,"[345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0]",
+towerse.section_A,output,m**2,"[0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018, 0.2735042449088018]",
+towerse.section_Asx,output,m**2,"[0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257]",
+towerse.section_Asy,output,m**2,"[0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257, 0.1664773259652257]",
+towerse.section_Ixx,output,kg*m**2,"[0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085]",
+towerse.section_Iyy,output,kg*m**2,"[0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085, 0.5410557311191085]",
+towerse.section_J0,output,kg*m**2,"[1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217, 1.082111462238217]",
+towerse.section_rho,output,kg/m**3,"[8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0, 8000.0]",
+towerse.section_E,output,Pa,"[200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0, 200000000000.0]",
+towerse.section_G,output,Pa,"[79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0, 79300000000.0]",
+towerse.section_L,output,m,"[5.8500000000000005, 5.8500000000000005, 5.850000000000003, 5.849999999999998, 5.849999999999998, 5.8500000000000085, 5.849999999999994, 5.850000000000001, 5.849999999999994, 5.850000000000001, 5.8500000000000085, 5.8500000000000085, 5.84999999999998, 5.8500000000000085, 5.849999999999994, 5.8500000000000085, 5.8500000000000085, 5.84999999999998, 5.8500000000000085, 5.849999999999994]",
+towerse.post.cylinder_Fz,input,N,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.post.cylinder_Vx,input,N,"[[-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0]]",
+towerse.post.cylinder_Vy,input,N,"[[-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0]]",
+towerse.post.cylinder_Mxx,input,N*m,"[[-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0]]",
+towerse.post.cylinder_Myy,input,N*m,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.post.cylinder_Mzz,input,N*m,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.qdyn,output,Pa,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.nodes_xyz,output,m,"[[0.0, 0.0, 0.0], [0.0, 0.0, 5.8500000000000005], [0.0, 0.0, 11.700000000000001], [0.0, 0.0, 17.550000000000004], [0.0, 0.0, 23.400000000000002], [0.0, 0.0, 29.25], [0.0, 0.0, 35.10000000000001], [0.0, 0.0, 40.95], [0.0, 0.0, 46.800000000000004], [0.0, 0.0, 52.65], [0.0, 0.0, 58.5], [0.0, 0.0, 64.35000000000001], [0.0, 0.0, 70.20000000000002], [0.0, 0.0, 76.05], [0.0, 0.0, 81.9], [0.0, 0.0, 87.75], [0.0, 0.0, 93.60000000000001], [0.0, 0.0, 99.45000000000002], [0.0, 0.0, 105.3], [0.0, 0.0, 111.15], [0.0, 0.0, 117.0]]",
+towerse.rna_mass,input,kg,296780.0,
+towerse.rna_I,input,kg*m**2,"[114930678.0, 22035403.0, 18759742.5, 0.0, 503710.467, 0.0]",
+towerse.rna_cg,input,m,"[-1.13197635, 0.0, 0.50875268]",
+towerse.tower.rna_F,input,N,"[[0.0], [0.0], [0.0]]",
+towerse.tower.rna_M,input,N*m,"[[0.0], [0.0], [0.0]]",
+towerse.Px,output,N/m,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.Py,output,N/m,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.Pz,output,N/m,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.tower_mass,output,kg,255999.9732346391,
+towerse.tower_center_of_mass,output,m,58.49999999999996,
+towerse.tower_I_base,output,kg*m**2,"[1168634306.0339842, 1168634306.0339842, 1012856.3286549709, 0.0, 0.0, 0.0]",
+towerse.member.gc.d,input,m,"[4.0, 4.0]",
+towerse.member.gc.t,input,m,0.0218845092026868,
+towerse.member.s,output,,"[0.0, 1.0]",
+towerse.member.height,output,m,117.0,
+towerse.tower_outer_diameter,output,m,"[4.0, 4.0]",
+towerse.member.ca_usr_grid,input,,"[0.0, 0.0]",
+towerse.member.cd_usr_grid,input,,"[0.0, 0.0]",
+towerse.tower_wall_thickness,output,m,0.0218845092026868,
+towerse.member.E,output,Pa,200000000000.0,
+towerse.member.G,output,Pa,79300000000.0,
+towerse.member.sigma_y,output,Pa,345000000.0,
+towerse.member.rho,output,kg/m**3,8000.0,
+towerse.member.unit_cost,output,USD/kg,0.7,
+towerse.member.outfitting_factor,output,,1.0,
+towerse.rho_water,input,kg/m**3,0.0,
+towerse.member.s_ghost1,input,,0.0,
+towerse.member.s_ghost2,input,,1.0,
+towerse.tower_s,input,,"[0.0, 1.0]",
+towerse.member.s_const1,input,,0.0,
+towerse.member.s_const2,input,,0.0,
+towerse.tower_layer_thickness,input,m,"[[0.0218845092026868, 0.0218845092026868]]",
+towerse.tower_outer_diameter_in,input,m,"[4.0, 4.0]",
+towerse.E_mat,input,Pa,"[[200000000000.0, 200000000000.0, 200000000000.0]]",
+towerse.E_user,input,Pa,0.0,
+towerse.G_mat,input,Pa,"[[79300000000.0, 79300000000.0, 79300000000.0]]",
+towerse.sigma_y_mat,input,Pa,345000000.0,
+towerse.sigma_ult_mat,input,Pa,"[[1120000000.0, 1120000000.0, 1120000000.0]]",
+towerse.wohler_exp_mat,input,,3.0,
+towerse.wohler_A_mat,input,,35534648443.719765,
+towerse.rho_mat,input,kg/m**3,8000.0,
+towerse.unit_cost_mat,input,USD/kg,0.7,
+towerse.outfitting_factor_in,input,,1.0,
+towerse.tower_layer_materials,input,n/a,steel,
+towerse.member.ballast_materials,input,n/a,[],
+towerse.material_names,input,n/a,steel,
+towerse.outfitting_full,output,,"[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]",
+towerse.member.unit_cost_full,output,USD/kg,"[0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7]",
+towerse.labor_cost_rate,input,USD/min,0.98,
+towerse.painting_cost_rate,input,USD/m**2,30.0,
+towerse.tower_mass_user,input,kg,0.0,
+towerse.hub_height,input,m,117.0,
+towerse.foundation_height,input,m,0.0,
+high_level_tower_props.tower_ref_axis_user,input,m,"[[0.0, 0.0, 0.0], [0.0, 0.0, 117.0]]","2D array of the coordinates (x,y,z) of the tower reference axis. The coordinate system is the global coordinate system of OpenFAST: it is placed at tower base with x pointing downwind, y pointing on the side and z pointing vertically upwards. A standard tower configuration will have zero x and y values and positive z values."
+high_level_tower_props.distance_tt_hub,input,m,0.0,Vertical distance from tower top to hub center.
+high_level_tower_props.hub_height_user,input,m,117.0,Height of the hub specified by the user.
+high_level_tower_props.rotor_diameter,input,m,0.0,"Scalar of the rotor diameter, defined as 2 x (Rhub + blade length along z) * cos(precone)."
+materials.rho_fiber,output,kg/m**3,0.0,1D array of the density of the fibers of the materials.
+materials.rho,output,kg/m**3,8000.0,"1D array of the density of the materials. For composites, this is the density of the laminate."
+materials.rho_area_dry,output,kg/m**2,0.0,1D array of the dry aerial density of the composite fabrics. Non-composite materials are kept at 0.
+materials.ply_t_from_yaml,output,m,0.0,1D array of the ply thicknesses of the materials. Non-composite materials are kept at 0.
+materials.fvf_from_yaml,output,,0.0,1D array of the non-dimensional fiber volume fraction of the composite materials. Non-composite materials are kept at 0.
+materials.fwf_from_yaml,output,,0.0,1D array of the non-dimensional fiber weight- fraction of the composite materials. Non-composite materials are kept at 0.
+materials.name,output,n/a,steel,1D array of names of materials.
+materials.component_id,output,n/a,-1.0,"1D array of flags to set whether a material is used in a blade: 0 - coating, 1 - sandwich filler , 2 - shell skin, 3 - shear webs, 4 - spar caps, 5 - TE/LE reinf."
+tower_grid.ref_axis,input,m,"[[0.0, 0.0, 0.0], [0.0, 0.0, 117.0]]","2D array of the coordinates (x,y,z) of the tower reference axis. The coordinate system is the global coordinate system of OpenFAST: it is placed at tower base with x pointing downwind, y pointing on the side and z pointing vertically upwards. A standard tower configuration will have zero x and y values and positive z values."
+towerse.env.Px,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.Py,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.Pz,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.qdyn,output,N/m**2,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.wind.U,output,m/s,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.windLoads.windLoads_Px,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.windLoads.windLoads_Py,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.windLoads.windLoads_Pz,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.windLoads.windLoads_qdyn,output,N/m**2,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.env.windLoads.windLoads_z,output,m,"[0.0, 5.8500000000000005, 11.700000000000001, 17.550000000000004, 23.400000000000002, 29.25, 35.10000000000001, 40.95, 46.800000000000004, 52.65, 58.5, 64.35000000000001, 70.20000000000002, 76.05, 81.9, 87.75, 93.60000000000001, 99.45000000000002, 105.3, 111.15, 117.0]",
+towerse.env.windLoads.windLoads_beta,output,deg,0.0,
+towerse.g2e.Px,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.g2e.Py,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.g2e.Pz,output,N/m,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.g2e.qdyn,output,Pa,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.post.axial_stress,output,Pa,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.post.shear_stress,output,Pa,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.post.hoop_stress,output,Pa,"[[-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0]]",
+towerse.post.hoop_stress_euro,output,Pa,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.post.constr_stress,output,,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.post.constr_shell_buckling,output,,"[[3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16], [3.333333333333333e-16]]",
+towerse.post.constr_global_buckling,output,,"[[nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan], [nan]]",
+towerse.tower.f1,output,Hz,0.11672818135188825,
+towerse.tower.f2,output,Hz,0.11914625045888076,
+towerse.tower.structural_frequencies,output,Hz,"[0.11672818135188825, 0.11914625045888076, 0.7760778709299511, 0.9862784310442833, 1.1542204082022816, 2.124804074717904]",
+towerse.tower.fore_aft_modes,output,,"[[1.5559410028232363, -0.6282324535599173, 0.15029718098570544, -0.12405957440046082, 0.04605384415137635], [-67.68459038218116, 88.91919512504234, 8.05513361237681, -38.697127194148266, 10.40738883891053], [-485.53652927305683, 1026.1251233209337, 82.58977221883745, -1163.8441238050702, 541.6657575383551]]",
+towerse.tower.side_side_modes,output,,"[[1.5330394954040385, -0.6023133278079875, 0.1442152492018777, -0.11914891049873524, 0.04420749370074529], [408.93280563805956, -491.5736397923827, 31.251893456025513, 60.16309605790318, -7.774155359608561], [-103.6209489148095, 174.47806337273843, 49.69304219034013, -192.3186071839686, 72.76845053569977]]",
+towerse.tower.torsion_modes,output,,"[[12.323605188744846, -48.643831312377586, 87.53543882148921, -73.81034832749397, 23.595135629637447], [0.0, 0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0, 0.0]]",
+towerse.tower.fore_aft_freqs,output,Hz,"[0.11914625045888076, 1.1542204082022816, 2.8817591173099424]",
+towerse.tower.side_side_freqs,output,Hz,"[0.11672818135188825, 0.7760778709299511, 2.124804074717904]",
+towerse.tower.torsion_freqs,output,Hz,"[5.538077852285421, 0.0, 0.0]",
+towerse.tower.tower_deflection,output,m,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.tower.top_deflection,output,m,0.0,
+towerse.tower.tower_Fz,output,N,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.tower.tower_Vx,output,N,"[[-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0]]",
+towerse.tower.tower_Vy,output,N,"[[-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0]]",
+towerse.tower.tower_Mxx,output,N*m,"[[-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0], [-0.0]]",
+towerse.tower.tower_Myy,output,N*m,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.tower.tower_Mzz,output,N*m,"[[0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]]",
+towerse.tower.turbine_F,output,N,"[[-0.0], [-0.0], [-0.0]]",
+towerse.tower.turbine_M,output,N*m,"[[-0.0], [-0.0], [-0.0]]",
+towerse.turbine_mass,output,kg,552779.973234639,
+towerse.turbine_center_of_mass,output,m,"[-0.6077426054116469, 0.0, 90.18099147639852]",
+towerse.turbine_I_base,output,kg*m**2,"[5346186404.033984, 5253291129.033984, 19772598.82865497, 0.0, 503710.467, 0.0]",
+towerse.constr_d_to_t,output,,182.77768822473354,
+towerse.constr_taper,output,,1.0,
+towerse.slope,output,,1.0,
+towerse.member.ca_usr_grid_full,output,,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.member.cd_usr_grid_full,output,,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.member.nu_full,output,,"[0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385, 0.26103404791929385]",
+towerse.member.nodes_r,output,m,"[2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0]",
+towerse.member.center_of_buoyancy,output,m,"[0.0, 0.0, 0.0]",
+towerse.member.displacement,output,m**3,0.0,
+towerse.member.buoyancy_force,output,N,0.0,
+towerse.member.idx_cb,output,,0.0,
+towerse.member.Awater,output,m**2,0.0,
+towerse.member.Iwaterx,output,m**4,0.0,
+towerse.member.Iwatery,output,m**4,0.0,
+towerse.member.added_mass,output,kg,"[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
+towerse.member.waterline_centroid,output,m,"[0.0, 0.0]",
+towerse.member.z_dim,output,m,"[0.0, 5.8500000000000005, 11.700000000000001, 17.550000000000004, 23.400000000000002, 29.25, 35.10000000000001, 40.95, 46.800000000000004, 52.65, 58.5, 64.35000000000001, 70.20000000000002, 76.05, 81.9, 87.75, 93.60000000000001, 99.45000000000002, 105.3, 111.15, 117.0]",
+towerse.member.d_eff,output,m,"[4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]",
+towerse.tower_section_height,output,m,117.0,
+towerse.member.sigma_ult,output,Pa,1120000000.0,
+towerse.member.wohler_exp,output,,3.0,
+towerse.member.wohler_A,output,,35534648443.719765,
+towerse.member.ballast_density,output,kg/m**3,[],
+towerse.member.ballast_unit_cost,output,USD/kg,[],
+towerse.z_param,output,m,"[0.0, 117.0]",
+towerse.member.sec_loc,output,,0.0,normalized sectional location
+towerse.member.str_tw,output,deg,0.0,structural twist of section
+towerse.member.tw_iner,output,deg,0.0,inertial twist of section
+towerse.member.mass_den,output,kg/m,2188.0339592704145,sectional mass per unit length
+towerse.member.foreaft_iner,output,kg*m,4328.445848952868,sectional fore-aft intertia per unit length about the Y_G inertia axis
+towerse.member.sideside_iner,output,kg*m,4328.445848952868,sectional side-side intertia per unit length about the Y_G inertia axis
+towerse.member.foreaft_stff,output,N*m**2,108211146223.8217,sectional fore-aft bending stiffness per unit length about the Y_E elastic axis
+towerse.member.sideside_stff,output,N*m**2,108211146223.8217,sectional side-side bending stiffness per unit length about the Y_E elastic axis
+towerse.member.tor_stff,output,N*m**2,85811438955.49062,sectional torsional stiffness
+towerse.member.axial_stff,output,N,54700848981.76036,sectional axial stiffness
+towerse.member.cg_offst,output,m,0.0,offset from the sectional center of mass
+towerse.member.sc_offst,output,m,0.0,offset from the sectional shear center
+towerse.member.tc_offst,output,m,0.0,offset from the sectional tension center
+towerse.member.axial_load2stress,output,m**2,"[[0.19527530793240763, 0.19527530793240763, 3.656250382268997, 3.696476878385968, 3.696476878385968, 0.0]]",
+towerse.member.shear_load2stress,output,m**2,"[[6.006824017637592, 6.006824017637592, 0.0, 0.0, 0.0, 1.848238439192984]]",
+towerse.member.labor_hours,output,h,521.3078104790911,
+towerse.tower_cost,output,USD,775988.9940760562,
+towerse.member.section_D,output,m,"[4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]",
+towerse.member.section_t,output,m,"[0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868, 0.0218845092026868]",
+towerse.member.section_sigma_y,output,Pa,"[345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0, 345000000.0]",
+towerse.height_constraint,output,m,0.0,
+towerse.transition_piece_height,output,m,0.0,
+towerse.z_start,output,m,0.0,
+configuration.rated_power,output,W,5000000.0,Electrical rated power of the generator.
+configuration.lifetime,output,year,25.0,Turbine design lifetime.
+configuration.rotor_diameter_user,output,m,127.184,"Diameter of the wind turbine rotor specified by the user, defined as 2 x (Rhub + blade length along z) * cos(precone)."
+configuration.hub_height_user,output,m,117.0,Height of the hub center over the ground (land-based) or the mean sea level (offshore) specified by the user.
+configuration.ws_class,output,n/a,I,"IEC wind turbine class. I - offshore, II coastal, III - land-based, IV - low wind speed site."
+configuration.turb_class,output,n/a,B,"IEC wind turbine category. A - high turbulence intensity (land-based), B - mid turbulence, C - low turbulence (offshore)."
+configuration.gearbox_type,output,n/a,geared,"Gearbox configuration (geared, direct-drive, etc.)."
+configuration.rotor_orientation,output,n/a,upwind,"Rotor orientation, either upwind or downwind."
+configuration.upwind,output,n/a,True,Convenient boolean for upwind (True) or downwind (False).
+configuration.n_blades,output,n/a,3,Number of blades of the rotor.
+costs.offset_tcc_per_kW,output,USD/kW,0.0,Offset to turbine capital cost
+costs.bos_per_kW,output,USD/kW,0.0,Balance of station/plant capital cost
+costs.opex_per_kW,output,USD/kW/year,0.0,Average annual operational expenditures of the turbine
+costs.wake_loss_factor,output,,0.15,The losses in AEP due to waked conditions
+costs.fixed_charge_rate,output,,0.075,Fixed charge rate for coe calculation
+costs.labor_rate,output,USD/h,58.8,
+costs.painting_rate,output,USD/m**2,30.0,
+costs.blade_mass_cost_coeff,output,USD/kg,14.6,
+costs.hub_mass_cost_coeff,output,USD/kg,3.9,
+costs.pitch_system_mass_cost_coeff,output,USD/kg,22.1,
+costs.spinner_mass_cost_coeff,output,USD/kg,11.1,
+costs.lss_mass_cost_coeff,output,USD/kg,11.9,
+costs.bearing_mass_cost_coeff,output,USD/kg,4.5,
+costs.gearbox_torque_cost,output,USD/kN/m,50.0,
+costs.hss_mass_cost_coeff,output,USD/kg,6.8,
+costs.generator_mass_cost_coeff,output,USD/kg,12.4,
+costs.bedplate_mass_cost_coeff,output,USD/kg,2.9,
+costs.yaw_mass_cost_coeff,output,USD/kg,8.3,
+costs.converter_mass_cost_coeff,output,USD/kg,18.8,
+costs.transformer_mass_cost_coeff,output,USD/kg,18.8,
+costs.hvac_mass_cost_coeff,output,USD/kg,124.0,
+costs.cover_mass_cost_coeff,output,USD/kg,5.7,
+costs.elec_connec_machine_rating_cost_coeff,output,USD/kW,41.85,
+costs.platforms_mass_cost_coeff,output,USD/kg,17.1,
+costs.tower_mass_cost_coeff,output,USD/kg,2.9,
+costs.controls_machine_rating_cost_coeff,output,USD/kW,21.15,
+costs.crane_cost,output,USD,12000.0,
+costs.electricity_price,output,USD/kW/h,0.04,
+costs.reserve_margin_price,output,USD/kW/year,120.0,
+costs.capacity_credit,output,,1.0,
+costs.benchmark_price,output,USD/kW/h,0.071,
+costs.turbine_number,output,n/a,50,Number of turbines at plant
+env.rho_air,output,kg/m**3,1.225,Density of air
+env.mu_air,output,kg/m/s,1.81e-05,Dynamic viscosity of air
+env.shear_exp,output,,0.2,Shear exponent of the wind.
+env.speed_sound_air,output,m/s,340.0,Speed of sound in air.
+env.weibull_k,output,,2.0,Shape parameter of the Weibull probability density function of the wind.
+env.rho_water,output,kg/m**3,1025.0,Density of ocean water
+env.mu_water,output,kg/m/s,0.0013351,Dynamic viscosity of ocean water
+env.water_depth,output,m,0.0,Water depth for analysis.  Values > 0 mean offshore
+env.Hsig_wave,output,m,0.0,Significant wave height
+env.Tsig_wave,output,s,0.0,Significant wave period
+env.G_soil,output,N/m**2,140000000.0,Shear stress of soil
+env.nu_soil,output,,0.4,Poisson ratio of soil
+high_level_tower_props.tower_ref_axis,output,m,"[[0.0, 0.0, 0.0], [0.0, 0.0, 117.0]]","2D array of the coordinates (x,y,z) of the tower reference axis. The coordinate system is the global coordinate system of OpenFAST: it is placed at tower base with x pointing downwind, y pointing on the side and z pointing vertically upwards. A standard tower configuration will have zero x and y values and positive z values."
+high_level_tower_props.hub_height,output,m,117.0,"Height of the hub in the global reference system, i.e. distance rotor center to ground."
+materials.ply_t,output,m,0.0,1D array of the ply thicknesses of the materials. Non-composite materials are kept at 0.
+materials.fvf,output,,0.0,1D array of the non-dimensional fiber volume fraction of the composite materials. Non-composite materials are kept at 0.
+materials.fwf,output,,0.0,1D array of the non-dimensional fiber weight- fraction of the composite materials. Non-composite materials are kept at 0.
+materials.E,output,Pa,"[[200000000000.0, 200000000000.0, 200000000000.0]]","2D array of the Youngs moduli of the materials. Each row represents a material, the three columns represent E11, E22 and E33."
+materials.G,output,Pa,"[[79300000000.0, 79300000000.0, 79300000000.0]]","2D array of the shear moduli of the materials. Each row represents a material, the three columns represent G12, G13 and G23."
+materials.nu,output,,"[[0.265, 0.265, 0.265]]","2D array of the Poisson ratio of the materials. Each row represents a material, the three columns represent nu12, nu13 and nu23."
+materials.Xt,output,Pa,"[[1120000000.0, 1120000000.0, 1120000000.0]]","2D array of the Ultimate Tensile Strength (UTS) of the materials. Each row represents a material, the three columns represent Xt12, Xt13 and Xt23."
+materials.Xc,output,Pa,"[[2160000000.0, 2160000000.0, 2160000000.0]]","2D array of the Ultimate Compressive Strength (UCS) of the materials. Each row represents a material, the three columns represent Xc12, Xc13 and Xc23."
+materials.S,output,Pa,"[[0.0, 0.0, 0.0]]","2D array of the Ultimate Shear Strength (USS) of the materials. Each row represents a material, the three columns represent S12, S13 and S23."
+materials.sigma_y,output,Pa,345000000.0,Yield stress of the material (in the principle direction for composites).
+materials.wohler_exp,output,,3.0,Exponent of S-N Wohler fatigue curve in the form of S = A*N^-(1/m).
+materials.wohler_intercept,output,,35534648443.719765,"Stress-intercept (A) of S-N Wohler fatigue curve in the form of S = A*N^-(1/m), taken as ultimate stress unless otherwise specified."
+materials.unit_cost,output,USD/kg,0.7,1D array of the unit costs of the materials.
+materials.waste,output,,0.0,1D array of the non-dimensional waste fraction of the materials.
+materials.roll_mass,output,kg,0.0,1D array of the roll mass of the composite fabrics. Non-composite materials are kept at 0.
+materials.orth,output,n/a,0.0,1D array of flags to set whether a material is isotropic (0) or orthtropic (1). Each entry represents a material.
+tower.ref_axis,output,m,"[[0.0, 0.0, 0.0], [0.0, 0.0, 117.0]]","2D array of the coordinates (x,y,z) of the tower reference axis. The coordinate system is the global coordinate system of OpenFAST: it is placed at tower base with x pointing downwind, y pointing on the side and z pointing vertically upwards. A standard tower configuration will have zero x and y values and positive z values."
+tower.diameter,output,m,"[4.0, 4.0]",1D array of the outer diameter values defined along the tower axis.
+tower.cd,output,,"[1.0, 1.0]",1D array of the drag coefficients defined along the tower height.
+tower.layer_thickness,output,m,"[[0.0218845092026868, 0.0218845092026868]]","2D array of the thickness of the layers of the tower structure. The first dimension represents each layer, the second dimension represents each piecewise-constant entry of the tower sections."
+tower.outfitting_factor,output,,1.0,Multiplier that accounts for secondary structure mass inside of tower
+tower.tower_mass_user,output,kg,0.0,Override bottom-up calculation of total tower mass with this value
+tower.layer_name,output,n/a,tower_wall,1D array of the names of the layers modeled in the tower structure.
+tower.layer_mat,output,n/a,steel,1D array of the names of the materials of each layer modeled in the tower structure.
+tower_grid.s,output,,"[0.0, 1.0]","1D array of the non-dimensional grid defined along the tower axis (0-tower base, 1-tower top)"
+tower_grid.height,output,m,117.0,Scalar of the tower height computed along the z axis.
+tower_grid.length,output,m,117.0,Scalar of the tower length computed along its curved axis. A standard straight tower will be as high as long.
+tower_grid.foundation_height,output,m,0.0,Foundation height in respect to the ground level.

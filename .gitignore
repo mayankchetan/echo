@@ -1,0 +1,19 @@
+# OpenFAST
+*.out
+*.outb
+*.sum*
+*.ech
+
+# python
+__pycache__
+*.pyc
+*.vscode
+
+# MAC
+.DS_Store
+
+# WEIS
+*.3dd
+*.pkl
+*.npz
+*.log
